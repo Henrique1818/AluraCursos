@@ -2,7 +2,12 @@ body {
     background-color: #CCC;
 }
 
+#banner {
+    width: 100%;
+}
+
 h1 {
+    margin-top: 12px;
     text-align: center;
 }
 
