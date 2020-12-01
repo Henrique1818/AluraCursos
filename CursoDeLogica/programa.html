@@ -6,4 +6,19 @@
     document.write('A idade é Diego: ' + (ano - 1999) + ' anos' + '<br>');
     document.write('A idade é Ana: ' + (ano - 2001) + ' anos' + '<br>');
     document.write('A idade é Bianca: '+ (ano - 2010) + ' anos' + '<br>');
+
+    /* calculando a media */
+
+    let idadeDiego = 21;
+    let idadeAna = 19;
+    let idadeBianca = 10;
+
+    let media = (idadeAna + idadeBianca + idadeDiego) / 3;
+    
+    document.write(`A media das idades é ${Math.round(media)}`);
+
+    const nome = 'Diego';
+
+    document.write(`<br> A idade de ${nome} é ${idadeDiego}`);
+
 </script>
