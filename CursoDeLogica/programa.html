@@ -7,15 +7,16 @@
         document.write('<br>');
     };
 
+    function mostrar(frase) {
+        document.write(frase);
+        pulaLinha();
+    };
+
     let ano = 2020;
 
-    document.write('A idade é Diego: ' + (ano - 1999) + ' anos');
-    pulaLinha();
+    mostrar('A idade é Diego: ' + (ano - 1999) + ' anos');
 
-    document.write('A idade é Ana: ' + (ano - 2001) + ' anos');
-    pulaLinha();
+    mostrar('A idade é Ana: ' + (ano - 2001) + ' anos');
 
-    document.write('A idade é Bianca: '+ (ano - 2010) + ' anos');
-    pulaLinha();
-
+    mostrar('A idade é Bianca: '+ (ano - 2010) + ' anos');
 </script>
