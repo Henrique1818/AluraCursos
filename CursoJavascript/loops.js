@@ -30,3 +30,9 @@ while(contador < 3) {
 };
 
 console.log('Destino existe: ', destionoExiste);
+
+if(podeComprar && destionoExiste) {
+    console.log('Boa Viagem!');
+} else {
+    console.log('Desculpe tivemos um erro!');
+};
