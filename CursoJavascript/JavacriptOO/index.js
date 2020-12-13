@@ -8,20 +8,22 @@ class ContaCorrente{
     agencia;
 
     // passando nossa propriedade ou atributo
-    // para ser privado usando # ou _ porem _ não 100% privado ainda pode ser manipulada;
-    #saldo = 0;
+    // para ser privado usando # ou _ usando somente dentro da classe criada;
+    _saldo = 0;
 
     // criando um método/função
     sacar(valor) {
-        if(this.#saldo >= valor) {
-            this.#saldo -= valor;
+        if(this._saldo >= valor) {
+            this._saldo -= valor;
+
+            return valor;
         }
     }
 
     depositar(valor) {
-        if(valor > 0) {
-            this.#saldo += valor;
-        }
+        if(valor <= 0) return;
+
+        this._saldo += valor;
     }
 };
 
@@ -38,7 +40,11 @@ cliente2.cpf = 88833355509;
 const contaCorrenteRicardo = new ContaCorrente();
 contaCorrenteRicardo.agencia = 1001;
 
-contaCorrenteRicardo.depositar(200);
-contaCorrenteRicardo.sacar(50);
+contaCorrenteRicardo.depositar(100);
+contaCorrenteRicardo.depositar(100);
+contaCorrenteRicardo.depositar(100);
+
+const valorSacado = contaCorrenteRicardo.sacar(50);
+console.log(valorSacado);
 
 console.log(contaCorrenteRicardo);
