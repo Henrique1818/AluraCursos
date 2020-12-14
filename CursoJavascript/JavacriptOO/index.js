@@ -28,6 +28,8 @@ contaCorrenteRicardo.transferir(valor, conta2);
 console.log(conta2);
 
 
+// null = alguem colocou diretamente esse valor vazio;
+// undefined = alguem esqueceu de defini algum valor a variavel;
 
 // contaCorrenteRicardo.depositar(100);
 // contaCorrenteRicardo.depositar(100);
