@@ -1,31 +1,5 @@
-class Cliente{
-    nome; // criando propriedades == criando atributos
-    cpf;
-};
-
-// criando uma classe == criando um modelo
-class ContaCorrente{
-    agencia;
-
-    // passando nossa propriedade ou atributo
-    // para ser privado usando # ou _ usando somente dentro da classe criada;
-    _saldo = 0;
-
-    // criando um método/função
-    sacar(valor) {
-        if(this._saldo >= valor) {
-            this._saldo -= valor;
-
-            return valor;
-        }
-    }
-
-    depositar(valor) {
-        if(valor <= 0) return;
-
-        this._saldo += valor;
-    }
-};
+import { Cliente } from './Cliente.js';
+import { ContaCorrente } from './ContaCorrente.js';
 
 // instanciando nosso modelo para uma variavel == criando um Objeto;
 const cliente1 = new Cliente();
