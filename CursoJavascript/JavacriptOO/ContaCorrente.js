@@ -1,6 +1,8 @@
 // criando uma classe == criando um modelo
 export class ContaCorrente{
     agencia;
+    cliente;
+
 
     // passando nossa propriedade ou atributo
     // para ser privado usando # ou _ usando somente dentro da classe criada;
@@ -19,5 +21,10 @@ export class ContaCorrente{
         if(valor <= 0) return;
 
         this._saldo += valor;
+    }
+
+    transferir(valor, conta) {
+        const valorSacado = this.sacar(valor);
+        conta.depositar(valorSacado);
     }
 };
