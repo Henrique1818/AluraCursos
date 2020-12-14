@@ -1,12 +1,29 @@
+import { Cliente } from "./Cliente.js";
+
 // criando uma classe == criando um modelo
 export class ContaCorrente{
     agencia;
-    cliente;
+    _cliente;
+
+    set cliente(novoValor) {
+        if(novoValor instanceof Cliente) {
+            this._cliente = novoValor;
+        }
+    }
+
+    get cliente() {
+        return this._cliente;
+    }
 
 
     // passando nossa propriedade ou atributo
     // para ser privado usando # ou _ usando somente dentro da classe criada;
     _saldo = 0;
+
+    get saldo() {
+        return this._saldo;
+    }
+
 
     // criando um método/função
     sacar(valor) {
