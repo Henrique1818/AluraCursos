@@ -21,6 +21,17 @@
     let nome = prompt('Informe seu nome');
     let peso = prompt('Informe seu peso');
     let altura = prompt('Informe sua altura');
+    let imcResultado = calculaIMC(peso, altura)
 
-    mostrar(`Olá ${nome} seu IMC é ${calculaIMC(peso, altura)}`);
+    mostrar(`Olá ${nome}, seu IMC é ${imcResultado}`);
+
+    if(imcResultado <= 18.5) {
+        mostrar(`${nome}, você está abaixo do recomendado`);
+    }
+    else if(imcResultado >= 35) {
+        mostrar(`${nome}, você está acima do recomendado`);
+    }
+    else if(imcResultado >= 18.5 && imc <= 35) {
+        mostrar(`${nome}, seu imc está exelente`);
+    }
 </script>
