@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write('<br>');
+        document.write('<br>');
+    };
+
+    function mostrar(imc) {
+        document.write(imc);
+        pulaLinha();
+    };
+
+    let numeroPensado = Math.round(Math.random() * 10);
+    let chute = parseInt(prompt('Informe um número entre 0 à 10'));
+
+    if(numeroPensado == chute) {
+        mostrar('Você acertou, Parabéns!!');
+    } else {
+        mostrar(`Você errou, número pensado foi ${numeroPensado}`)
+    }
+</script>
