@@ -7,21 +7,26 @@
         document.write('<br>');
     };
 
-    function mostrar(imc) {
-        document.write(imc);
+    function mostrar(frase) {
+        document.write(frase);
         pulaLinha();
     };
 
-    function sorteia(numero) {
-        return Math.round(Math.random() * numero);
+    let numeroPensado = Math.round(Math.random() * 10);
+    let tentativas = 1;
+
+    while(tentativas <= 3) {
+        let chute = parseInt(prompt('Informe um número entre 0 à 10'));
+
+        if(numeroPensado == chute) {
+            mostrar(`Parabéns!!, Você acertou, pois eu pensei no nº ${numeroPensado}`);
+            break;
+        } else {
+            mostrar(`Você errou!`);
+        }
+
+        tentativas++;
     }
 
-    let numeroPensado = sorteia(10)
-    let chute = parseInt(prompt('Informe um número entre 0 à 10'));
-
-    if(numeroPensado == chute) {
-        mostrar(`Parabéns!!, Você acertou, pois eu pensei no nº ${numeroPensado}`);
-    } else {
-        mostrar(`Você errou!, Eu tinha pensado no nº ${numeroPensado}`);
-    }
+    mostrar('FIM')
 </script>
