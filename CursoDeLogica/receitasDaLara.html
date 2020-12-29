@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>Receitas da Lara</h1>
+
+<script>
+    
+    let quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+    
+    let ingredientes = [];
+    let contador = 1;
+
+    while(contador <= quantidade) {
+
+        let achou = false;
+        let ingrediente = prompt("Informe o ingrediente " + contador);
+
+        for(let posicao = 0; posicao < ingredientes.length; posicao++) {
+            if(ingredientes[posicao] == ingrediente) {
+                achou = true;
+                break;
+            }
+        }
+        
+        if(achou == false) {
+            ingredientes.push(ingrediente);
+            contador++;
+        }
+    }        
+
+    document.write(`${ingredientes.join(', ')}`)
+    console.log(ingredientes);
+</script>
