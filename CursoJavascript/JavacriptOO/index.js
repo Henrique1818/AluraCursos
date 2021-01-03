@@ -2,7 +2,6 @@ import { Cliente } from './Cliente.js';
 import { ContaCorrente } from './ContaCorrente.js';
 import { ContaPoupanca } from './ContaPoupanca.js';
 
-// instanciando nosso modelo para uma variavel == criando um Objeto;
 const cliente1 = new Cliente('Ricardo', 22233355509);
 
 const contaCorrenteRicardo = new ContaCorrente(1001, cliente1);
