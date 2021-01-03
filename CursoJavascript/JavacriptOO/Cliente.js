@@ -1,7 +1,4 @@
 export class Cliente{
-    nome; // criando propriedades == criando atributos
-    _cpf;
-
     get cpf() {
         return this._cpf;
     }
