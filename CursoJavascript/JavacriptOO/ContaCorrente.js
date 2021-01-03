@@ -16,19 +16,17 @@ export class ContaCorrente{
         return this._cliente;
     }
 
-
     // passando nossa propriedade ou atributo
     // para ser privado usando # ou _ usando somente dentro da classe criada;
-    _saldo = 0;
 
     get saldo() {
         return this._saldo;
     }
 
-
     constructor(agencia, cliente) {
         this.agencia = agencia;
         this.cliente = cliente;
+        this._saldo = 0;
         ContaCorrente.numeroDeContas += 1;
     }
 
