@@ -8,5 +8,6 @@
   },
   "author": "Henrique",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "keywords": []
 }
